@@ -1,0 +1,15 @@
+<%= content_tag :div, "", id: "weathers_chart",data: {weatherdata: @weathers} %>
+
+<ul>
+  <% @weathers.each do |weather| %>
+    <li>
+      <%= Time.at(weather.time) %>
+    </li>
+    <li>
+      <%= weather.temperatureMin %>
+    </li>
+    <li>
+      <%= weather.temperatureMax %>
+    </li>
+    <% end %>
+</ul>
